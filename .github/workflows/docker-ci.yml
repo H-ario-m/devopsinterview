@@ -1,0 +1,30 @@
+name: Docker CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t anshuman-nodejs-app .
+
+    - name: Run Docker container
+      run: |
+        docker run -d -p 3000:3000 --name test-container anshuman-nodejs-app
+        sleep 10
+        docker ps
+
+    - name: Test application
+      run: |
+        curl http://localhost:3000 || exit 1
+
+    - name: Clean up
+      run: docker rm -f test-container

@@ -1,0 +1,15 @@
+{
+  "name": "anshuman-nodejs-app",
+  "version": "1.0.0",
+  "description": "DevOps Task - Node.js Application by Anshuman Ojha",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anshuman Ojha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
