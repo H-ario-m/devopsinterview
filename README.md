@@ -3,7 +3,7 @@
 ## Live Demo
 
 The application is live at:  
-[Node.js CI/CD Demo (Live)](http://34.27.69.25/)
+[Node.js CI/CD Demo (Live)](https://104.155.153.239/)
 
 ## Project Overview
 This project demonstrates a complete DevOps workflow for a Node.js application, including:
